@@ -234,19 +234,48 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
           
-          # Submodule LoopKit patches:
+          # Submodule LoopKit patches: Disable Authentication
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          #curl url_to_github_commit.patch | git apply --directory=LoopKit -v --whitespace=fix
+          curl https://github.com/carolvchn/LoopKit/commit/85947835ad4d9a79bfd4d86896d673278960365c.patch | git apply -v --directory= LoopKit.patch
           
-          # Submodule xxxxx patches:
+          # Submodule OmniBLE patches: 0.5u upon insertion
+          # General template for customizing submodule OmniBLE 
+          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
+          curl https://github.com/carolvchn/OmniBLE/commit/bf0c45b37c3a2b0ef63a68bf2ad35a7913036808.patch | git apply -v --directory=OmniBLE
+          
+          # Submodule Loop patches: Adjust Future Carbs Time Interval 
+          # General template for customizing submodule Loop
+          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
+          curl https://github.com/carolvchn/Loop/commit/d8d59b7a815975bf3b7367d4dcb4ba45bb1f5efd.patch | git apply -v --directory= Loop
 
-          # Add patches for customization of additional submodules by following the templates above, 
+          # Submodule Loop patches: Adjust default carb absorption time
+          # General template for customizing submodule Loop
+          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
+          curl https://github.com/carolvchn/Loop/commit/a87a6cd6db30d922b2a807161b5d2d1d07997c77.patch | git apply -v --directory= Loop
+
+           
+           # Add patches for customization of additional submodules by following the templates above, 
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
           
-          
+            # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: |
+
+          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
+
+          # Submodule Loop patches:
+          # Loop: Filename: customization details
+          #curl https://github.com/username/Loop/commit/SHA-1.patch | git apply -v --directory=Loop
+
+          # Submodule LoopKit patches:
+          # LoopKit: Filename: customization details
+          #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
+
+          # Submodule xxxxx patches: Follow prototype above
+    
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: find /usr/local/lib/ruby/gems -name table_printer.rb | xargs sed -i "" "/puts(Terminal::Table.new(params))/d"
