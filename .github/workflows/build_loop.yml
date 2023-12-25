@@ -228,18 +228,18 @@ jobs:
           # Submodule Loop patches: 0.5u Insulin upon insertion
           # General template for customizing submodule OmniBLE
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/OmniBLE/commit/bf0c45b37c3a2b0ef63a68bf2ad35a7913036808.patch | git apply -v --directory=OmniBLE
+            curl https://github.com/carolvchn/OmniBLE/commit/bf0c45b37c3a2b0ef63a68bf2ad35a7913036808.patch | git apply -v --directory=OmniBLE
             
           # Submodule LoopKit patches: Disable Authentication
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/LoopKit/commit/deda2e7192a0ef42fbf661b499efd981b91a74cd.patch | git apply -v --directory= LoopKit
+            curl https://github.com/carolvchn/LoopKit/commit/deda2e7192a0ef42fbf661b499efd981b91a74cd.patch | git apply -v --directory= LoopKit
     
           # Submodule Loop patches: Adjust Future Carbs Time Interval and carb absorption time
           # General template for customizing submodule Loop
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/Loop/commit/4f30f8f04e193f5a4424950370990ca26b868cb0.patch | git apply -v --directory= Loop
-          curl https://github.com/carolvchn/Loop/commit/afa7ef277a6b3d4a0b20f93a5fc396727bcd17b5.patch | git apply -v --directory= Loop
+            curl https://github.com/carolvchn/Loop/commit/4f30f8f04e193f5a4424950370990ca26b868cb0.patch | git apply -v --directory= Loop
+            curl https://github.com/carolvchn/Loop/commit/afa7ef277a6b3d4a0b20f93a5fc396727bcd17b5.patch | git apply -v --directory= Loop
 
 
     
