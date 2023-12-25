@@ -219,43 +219,8 @@ jobs:
           submodules: recursive
           ref: ${{ env.TARGET_BRANCH }}
           
-      # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: |
+    
 
-          # LoopWorkspace patches
-          # -applies any patches located in the LoopWorkspace/patches/ directory
-          if $(ls ./patches/* &> /dev/null); then
-          git apply ./patches/* --allow-empty -v --whitespace=fix
-          fi
-
-          # Submodule Loop patches:
-          # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
-          # Remove the "#" sign from the beginning of the line below to activate:
-          #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
-          
-          
-           
-           # Add patches for customization of additional submodules by following the templates above, 
-          # and make sure to specify the submodule by setting "--directory=(submodule_name)".
-          # Several patches may be added per submodule.
-          # Adding comments (#) may be useful to easily tell the individual patches apart.
-          
-            # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: |
-
-          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
-
-          # Submodule Loop patches:
-          # Loop: Filename: customization details
-          #curl https://github.com/username/Loop/commit/SHA-1.patch | git apply -v --directory=Loop
-
-          # Submodule LoopKit patches:
-          # LoopKit: Filename: customization details
-          #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
-
-          # Submodule xxxxx patches: Follow prototype above
     
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
