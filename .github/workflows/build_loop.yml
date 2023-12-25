@@ -234,26 +234,7 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
           
-          # Submodule LoopKit patches: Disable Authentication
-          # General template for customizing submodule LoopKit 
-          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/LoopKit/commit/85947835ad4d9a79bfd4d86896d673278960365c.patch | git apply -v --directory= LoopKit.patch
           
-          # Submodule OmniBLE patches: 0.5u upon insertion
-          # General template for customizing submodule OmniBLE 
-          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/OmniBLE/commit/bf0c45b37c3a2b0ef63a68bf2ad35a7913036808.patch | git apply -v --directory=OmniBLE
-          
-          # Submodule Loop patches: Adjust Future Carbs Time Interval 
-          # General template for customizing submodule Loop
-          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/Loop/commit/d8d59b7a815975bf3b7367d4dcb4ba45bb1f5efd.patch | git apply -v --directory= Loop
-
-          # Submodule Loop patches: Adjust default carb absorption time
-          # General template for customizing submodule Loop
-          # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-          curl https://github.com/carolvchn/Loop/commit/a87a6cd6db30d922b2a807161b5d2d1d07997c77.patch | git apply -v --directory= Loop
-
            
            # Add patches for customization of additional submodules by following the templates above, 
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
