@@ -239,7 +239,7 @@ jobs:
           # General template for customizing submodule Loop
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
             curl https://github.com/carolvchn/Loop/commit/4f30f8f04e193f5a4424950370990ca26b868cb0.patch | git apply -v --directory= Loop
-            curl https://github.com/carolvchn/Loop/commit/afa7ef277a6b3d4a0b20f93a5fc396727bcd17b5.patch | git apply -v --directory= Loop
+         
 
 
     
