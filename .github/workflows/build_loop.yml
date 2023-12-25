@@ -233,7 +233,7 @@ jobs:
           # Submodule LoopKit patches: Disable Authentication
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
-            curl https://github.com/carolvchn/LoopKit/commit/deda2e7192a0ef42fbf661b499efd981b91a74cd.patch | git apply -v --directory= LoopKit.patch
+            curl https://github.com/carolvchn/LoopKit/commit/deda2e7192a0ef42fbf661b499efd981b91a74cd.patch | git apply -v --directory= LoopKit
     
           # Submodule Loop patches: Adjust Future Carbs Time Interval and carb absorption time
           # General template for customizing submodule Loop
