@@ -229,9 +229,7 @@ jobs:
           # General template for customizing submodule Loop
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
           curl https://github.com/carolvchn/Loop/commit/d8d59b7a815975bf3b7367d4dcb4ba45bb1f5efd.patch | git apply -v --directory= Loop
-          curl https://github.com/carolvchn/Loop/commit/a87a6cd6db30d922b2a807161b5d2d1d07997c77.patch | git apply -v --directory= Loop
           
-          # Submodule LoopKit patches:
           # LoopKit: Filename: customization details
           #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
 
