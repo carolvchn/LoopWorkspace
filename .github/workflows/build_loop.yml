@@ -240,7 +240,7 @@ jobs:
             curl https://github.com/carolvchn/OmniBLE/commit/bf0c45b37c3a2b0ef63a68bf2ad35a7913036808.patch | git apply -v --directory=OmniBLE
             
 
-          # Submodule Loop patches: Adjust Future Carbs Time Interval and carb absorption time
+          # Submodule Loop patches: Adjust carb absorption time
           # General template for customizing submodule Loop
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
             curl https://github.com/carolvchn/Loop/commit/afa7ef277a6b3d4a0b20f93a5fc396727bcd17b5.patch | git apply -v --directory=Loop
