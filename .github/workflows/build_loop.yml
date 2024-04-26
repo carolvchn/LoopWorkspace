@@ -29,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Check alive branch and permissions
     permissions: write-all
-      contents:
     outputs:
       WORKFLOW_PERMISSION: ${{ steps.workflow-permission.outputs.has_permission }}
     
